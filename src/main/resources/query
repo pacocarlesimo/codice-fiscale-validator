@@ -1,0 +1,21 @@
+-- Schema del database SQLite per comuni e nazioni
+-- Tabella unica che contiene tutti i dati necessari
+
+CREATE TABLE comuni_nazioni (
+    sigla_provincia TEXT NOT NULL,
+    denominazione_ita TEXT NOT NULL,
+    codice_belfiore TEXT NOT NULL,
+    data_inizio_validita TEXT,    -- formato YYYY-MM-DD, NULL per stati esteri
+    data_fine_validita TEXT,      -- formato YYYY-MM-DD, NULL se ancora valido
+    PRIMARY KEY (sigla_provincia, denominazione_ita)
+);
+
+-- Indici per migliorare le performance
+CREATE INDEX idx_codice_belfiore ON comuni_nazioni(codice_belfiore);
+CREATE INDEX idx_denominazione ON comuni_nazioni(denominazione_ita);
+
+private static final int COL_SIGLA_PROVINCIA = 0;
+private static final int COL_DENOMINAZIONE = 1;
+private static final int COL_CODICE_BELFIORE = 2;
+private static final int COL_DATA_INIZIO = 3;
+private static final int COL_DATA_FINE = 4;
