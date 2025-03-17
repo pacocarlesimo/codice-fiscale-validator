@@ -85,5 +85,5 @@ Hai trovato un bug o vuoi suggerire una feature? Apri un'**issue** su GitHub!
 
 ## 📜 Licenza
 
-Questo progetto è rilasciato sotto licenza MIT. Sentiti libero di utilizzarlo e migliorarlo! 😊
+Questo progetto è rilasciato sotto licenza MIT. Sentiti libero di utilizzarlo e migliorarlo!
 
